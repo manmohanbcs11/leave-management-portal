@@ -38,7 +38,8 @@ export class Util {
   private static getDomainFromEmail(email: string): string | null {
     const parts = email.split('@');
     if (parts.length === 2) {
-        return parts[1];
+        const innerParts = parts[1].split('.');
+        return innerParts[0];
     } else {
       throw new ApiError(httpStatusCode.badRequest, 'Invalid email address.');
     }
