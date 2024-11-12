@@ -16,6 +16,7 @@ import { LeaveDetail } from './components/LeaveDetail';
 
 function App() {
   const [alert, setAlert] = useState<{ type: string; message: string }>({ type: '', message: '' });
+  console.log(alert);
 
   const showAlert = (type: string, message: string) => {
     setAlert({

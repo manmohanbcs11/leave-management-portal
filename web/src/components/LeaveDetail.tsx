@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'; // To get the :id parameter
 import '../css/leaveDetail.css'; // Include CSS for styling
 
 // Define the structure of a detailed leave
-interface LeaveDetail {
+interface LeaveDetailPorps {
   _id: string;
   leaveType: string;
   startDate: string; // To be formatted
@@ -15,7 +15,7 @@ interface LeaveDetail {
 
 export const LeaveDetail = () => {
   const { id } = useParams<{ id: string }>(); // Get the leave ID from the URL
-  const [leave, setLeave] = useState<LeaveDetail | null>(null); // State to store the leave details
+  const [leave, setLeave] = useState<LeaveDetailPorps | null>(null); // State to store the leave details
   const [loading, setLoading] = useState<boolean>(true); // Track loading state
   const [error, setError] = useState<string | null>(null); // Track errors
 

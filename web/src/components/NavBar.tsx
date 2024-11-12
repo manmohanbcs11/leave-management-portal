@@ -1,6 +1,6 @@
 import React from 'react';
+import { FaBalanceScale, FaBook, FaCalendarAlt, FaClipboardCheck, FaFileAlt, FaHome } from 'react-icons/fa';
 import { NavLink, useLocation } from 'react-router-dom';
-import { FaHome, FaBalanceScale, FaCalendarAlt, FaFileAlt, FaClipboardCheck, FaBell, FaUserCircle, FaBook } from 'react-icons/fa';
 import '../css/custom.css';
 
 export const NavBar: React.FC<{}> = () => {
