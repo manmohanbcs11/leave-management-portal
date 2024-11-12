@@ -17,5 +17,5 @@ app.use('/api/user/', userRouter);
 app.use('/api/leave/', leaveRouter);
 
 app.listen(port, () => {
-  return console.log(`Leave Management backend is listening at http://localhost:${port}`);
+  return console.log(`Leave Management backend has started listening...`);
 });
