@@ -4,6 +4,7 @@
   "description": "Backend of leave management portal that operates APIs to manage all aspects of leave applications.",
   "main": "dist/app.js",
   "scripts": {
+    "build": "npm install -f && tsc",
     "start": "tsc && node dist/app.js",
     "start-dev": "tsc && nodemon app.ts",
     "test": "mocha",
