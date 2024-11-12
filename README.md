@@ -153,13 +153,14 @@ This repository contains:
    - **Responses:** `200`: Success, `500`: Internal Server Error
 
 6. **Create Leave Calendar for a Year**
+   - **The calendar population can only done by ADMIN using the API endpoint.**
    - **Endpoint:** `POST /api/leave/createleavecalendar`
    - **Request Body:**
      ```json
      {
-       "year": 2023,
+       "year": 2024,
        "country": "India",
-       "csvFilePath": "/path/to/resources/Calendar2023.csv"
+       "csvFilePath": "/opt/render/project/src/api/src/resources/Calendar2024.csv"
      }
      ```
    - **Responses:** `200`: Success, `400`: Bad Request, `500`: Internal Server Error
