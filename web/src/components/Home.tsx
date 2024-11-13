@@ -20,8 +20,8 @@ export const Home = () => {
           <div className="card custom-card">
             <div className="card-body">
               <h4 className="card-title">Annual Leave</h4>
-              <p className="card-text">Availed: 10</p>
-              <p className="card-text">Balance left: 10</p>
+              <p className="card-text">Availed: 0</p>
+              <p className="card-text">Balance left: 26</p>
             </div>
           </div>
         </div>
@@ -29,8 +29,8 @@ export const Home = () => {
           <div className="card custom-card">
             <div className="card-body">
               <h4 className="card-title">Sick Leave</h4>
-              <p className="card-text">Availed: 5</p>
-              <p className="card-text">Balance left: 7</p>
+              <p className="card-text">Availed: 0</p>
+              <p className="card-text">Balance left: 10</p>
             </div>
           </div>
         </div>
@@ -38,8 +38,8 @@ export const Home = () => {
           <div className="card custom-card">
             <div className="card-body">
               <h4 className="card-title">Casual Leave</h4>
-              <p className="card-text">Availed: 3</p>
-              <p className="card-text">Balance left: 5</p>
+              <p className="card-text">Availed: 0</p>
+              <p className="card-text">Balance left: 14</p>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ export const Home = () => {
           <div className="card custom-card">
             <div className="card-body">
               <h4 className="card-title">Bereavement Leave</h4>
-              <p className="card-text">Availed: 1</p>
+              <p className="card-text">Availed: 0</p>
               <p className="card-text">Balance left: 2</p>
             </div>
           </div>
@@ -67,8 +67,8 @@ export const Home = () => {
           <div className="card custom-card">
             <div className="card-body">
               <h4 className="card-title">Compassionate Leave</h4>
-              <p className="card-text">Availed: 1</p>
-              <p className="card-text">Balance left: 2</p>
+              <p className="card-text">Availed: 0</p>
+              <p className="card-text">Balance left: 5</p>
             </div>
           </div>
         </div>
