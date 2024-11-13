@@ -35,7 +35,7 @@ export const AppliedLeave = () => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'auth-token': process.env.REACT_APP_AUTH_TOKEN || '',
+            'auth-token': localStorage.getItem('token') || '',
           },
         });
 

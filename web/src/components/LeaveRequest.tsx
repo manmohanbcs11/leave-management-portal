@@ -38,7 +38,7 @@ export const LeaveRequest = () => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'auth-token': process.env.REACT_APP_AUTH_TOKEN || '',
+            'auth-token': localStorage.getItem('token') || '',
           },
         });
 
@@ -72,7 +72,7 @@ export const LeaveRequest = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'auth-token': process.env.REACT_APP_AUTH_TOKEN || '',
+          'auth-token': localStorage.getItem('token') || '',
         },
         body: JSON.stringify(requestData),
       });
@@ -80,22 +80,21 @@ export const LeaveRequest = () => {
       if (response.ok) {
         setSuccess(true);
         setError(null);
-        // Reset the form fields after successful submission
         setLeaveType('');
         setStartDate('');
         setEndDate('');
-        setManagerIds([]);
         setComments('');
         window.alert('Leave request submitted successfully!');
+        navigate('/appliedleave');
       } else {
         setSuccess(false);
-        setError('Failed to submit leave request');
-        window.alert('Failed to submit leave request.');
+        setError('Bad request: Select atleast on manager.');
+        window.alert('Bad request: Select atleast on manager.');
       }
-    } catch (err) {
+    } catch (err: any) {
       setSuccess(false);
-      setError('Failed to submit leave request');
-      window.alert('Failed to submit leave request.');
+      setError(err.message || 'Failed to submit leave request.');
+      window.alert(err.message || 'Failed to submit leave request.');
     }
   };
 

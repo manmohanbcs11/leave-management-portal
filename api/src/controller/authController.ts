@@ -25,6 +25,14 @@ export class AuthController extends Util {
       Util.validateBody(req.body);
       const userRole = req.body.role ? UserRole[req.body.role.toUpperCase()] : UserRole.USER;
       const securePassword: string = await Util.generatePasswordHash(req.body.password);
+      let managerList: string[];
+      console.log('req?.body?.managerIds', req?.body?.managerIds);
+      if (!req?.body?.managerIds || req?.body?.managerIds.length === 0) {
+        managerList = ['673364a04f8d315f364c6adb'];
+      } else {
+        managerList = req.body.managerIds;
+      }
+      console.log('managerList', managerList);
 
       user = await EmployeeModel.create({
         name: req.body.name,
@@ -34,7 +42,7 @@ export class AuthController extends Util {
         role: userRole,
         department: req.body.department,
         jobTitle: req.body?.jobTitle,
-        managerIds: req.body?.managerIds || ['673364a04f8d315f364c6adb'],
+        managerIds: managerList,
         leaveBalance: req.body?.leaveBalance || 26,
         createdDate: Date.now(),
         updatedDate: Date.now()
