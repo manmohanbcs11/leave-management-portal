@@ -27,7 +27,7 @@ export class AuthController extends Util {
       const securePassword: string = await Util.generatePasswordHash(req.body.password);
       let managerList: string[];
       if (!req?.body?.managerIds || req?.body?.managerIds.length === 0) {
-        managerList = ['673364a04f8d315f364c6adb'];
+        managerList = [process.env.ADMIN_ID];
       } else {
         managerList = req.body.managerIds;
       }
