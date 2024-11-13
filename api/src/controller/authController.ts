@@ -26,13 +26,11 @@ export class AuthController extends Util {
       const userRole = req.body.role ? UserRole[req.body.role.toUpperCase()] : UserRole.USER;
       const securePassword: string = await Util.generatePasswordHash(req.body.password);
       let managerList: string[];
-      console.log('req?.body?.managerIds', req?.body?.managerIds);
       if (!req?.body?.managerIds || req?.body?.managerIds.length === 0) {
         managerList = ['673364a04f8d315f364c6adb'];
       } else {
         managerList = req.body.managerIds;
       }
-      console.log('managerList', managerList);
 
       user = await EmployeeModel.create({
         name: req.body.name,

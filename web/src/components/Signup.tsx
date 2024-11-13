@@ -40,7 +40,7 @@ export const Signup = (props: SignupProps) => {
       },
       body: JSON.stringify({ empId, name, email, password, jobTitle, department })
     });
-    console.log('response:', response);
+    
     if (response.ok) {
       const responseJson = await response.json();
       localStorage.setItem('token', responseJson.data.authToken);
