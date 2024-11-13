@@ -1,34 +1,73 @@
 .leave-detail-container {
-    padding: 20px; /* Padding around the component */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background */
-    width: 1200px;
-    margin: 20px auto;
-  }
-  
-  .leave-info {
-    display: flex;
-    flex-direction: column; /* Vertical layout */
-  }
-  
-  .leave-info p {
-    margin: 5px 0; /* Spacing between paragraphs */
-  }
-  
-  .leave-info strong {
-    font-weight: bold; /* Bold text for emphasis */
-  }
-  
-  .leave-info p {
-    color: #333; /* Text color */
-  }
-  
-  .error-message {
-    color: red; /* Red text for error messages */
-  }
-  
-  .loading {
-    color: #555; /* Color for loading message */
-  }
-  
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-container h2 {
+  margin: 0;
+}
+
+.back-link {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.leave-info {
+  display: flex;
+  justify-content: center;
+}
+
+.info-card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table .label {
+  font-weight: bold;
+  color: #555;
+  padding-right: 10px;
+  text-align: right;
+  width: 30%;
+  white-space: nowrap;
+}
+
+.info-table td {
+  padding: 10px 15px;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.error-message {
+  color: red;
+}
+
+.loading {
+  color: #555;
+}

@@ -72,7 +72,7 @@ export const AppliedLeave = () => {
           {leaves.map((leave) => (
             <tr key={leave._id}>
               <td>
-                <Link to={`/leave/${leave._id}`}>{leave.leaveType}</Link> {/* Create a clickable link */}
+                <Link to={`/leave/${leave._id}`}>{leave.leaveType}</Link>
               </td>
               <td>{new Date(leave.startDate).toLocaleDateString()}</td>
               <td>{new Date(leave.endDate).toLocaleDateString()}</td>
