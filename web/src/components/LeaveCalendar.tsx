@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../css/calendar.css';
+import { useNavigate } from 'react-router-dom';
 
 interface CalendarItem {
   _id: string;
@@ -20,6 +21,15 @@ export const LeaveCalendar = () => {
   const [activeSection, setActiveSection] = useState<'2023' | '2024' | null>('2024');
   const [calendars, setCalendars] = useState<Calendar[]>([]);
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    }
+  }, [navigate]);
+  
   useEffect(() => {
     const fetchData = async (year: number) => {
       try {

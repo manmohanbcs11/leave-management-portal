@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import React Router Link
+import { Link, useNavigate } from 'react-router-dom'; // Import React Router Link
 import '../css/appliedLeave.css'; // Include CSS for styling
 
 // Define the structure of a leave
@@ -18,6 +18,15 @@ export const AppliedLeave = () => {
   const [loading, setLoading] = useState<boolean>(true); // State to track loading
   const [error, setError] = useState<string | null>(null); // State to track errors
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    }
+  }, [navigate]);
+  
   // Fetch leaves from the API
   useEffect(() => {
     const fetchLeaves = async () => {

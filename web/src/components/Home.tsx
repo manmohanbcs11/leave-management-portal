@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/home.css';
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    }
+  }, [navigate]);
+
   return (
     <div className='home-container my-3'>
       <h2>Leave balance sheet</h2>
@@ -73,7 +83,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </div>
   );
-}
+};

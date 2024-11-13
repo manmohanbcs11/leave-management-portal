@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../css/leavePolicy.css';
+import { useNavigate } from 'react-router-dom';
 
 export const LeavePolicy = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    }
+  }, [navigate]);
+  
   return (
     <div className="leave-policy-container">
       <h2>Leave Buddy - Policies</h2>

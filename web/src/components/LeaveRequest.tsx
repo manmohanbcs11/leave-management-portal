@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/leaveRequest.css'; // Include CSS for styling
+import { useNavigate } from 'react-router-dom';
 
 // Define the structure of a manager
 interface Manager {
@@ -19,6 +20,15 @@ export const LeaveRequest = () => {
 
   // Initialize state to store manager options
   const [managers, setManagers] = useState<Manager[]>([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    }
+  }, [navigate]);
 
   // Fetch available managers from an API
   useEffect(() => {

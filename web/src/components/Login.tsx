@@ -1,5 +1,6 @@
 import React, { FormEvent, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import '../css/login.css';
 
 interface LoginProps {
   showAlert: (type: string, message: string) => void;
@@ -11,7 +12,7 @@ export const Login = (props: LoginProps) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "eNotebook - Login";
+    document.title = "Leave buddy - Login";
   });
 
   const handleOnSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -36,19 +37,38 @@ export const Login = (props: LoginProps) => {
   }
 
   return (
-    <div className='container mt-2'>
-      <h3 className='my-4'>Please login to use eNotebook:</h3>
-      <form onSubmit={handleOnSubmit}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email address</label>
-          <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+    <div>
+    <div className="login-container">
+      <h2>Please login first</h2>
+      <form className="login-form my-4" onSubmit={handleOnSubmit}>
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email Address</label>
+          <input
+            type="email"
+            className="form-input"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
-        <div className="mb-3">
+
+        <div className="form-group">
           <label htmlFor="password" className="form-label">Password</label>
-          <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input
+            type="password"
+            className="form-input"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+
+        <button type="submit" className="submit-btn">Submit</button>
       </form>
+      <NavLink to="/signup" className="signup-link">Don't have an account? Sign up here</NavLink>
     </div>
+  </div>
   )
 }
