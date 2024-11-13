@@ -1,0 +1,10 @@
+/* Container styling */
+.home-container {
+  padding: 20px; /* Padding around the component */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  width: 1200px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}

@@ -1,0 +1,63 @@
+/* General container styling */
+.leave-calendar-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 1200px;
+    margin: 20px auto;
+  }
+  
+  /* Title styling */
+  .leave-calendar-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Table styles */
+  .table-style {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .th-style {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .td-style {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Hover and alternating row styles */
+  .hover-style {
+    background-color: #f9f9f9;
+  }
+  
+  .odd-row-style {
+    background-color: #f5f5f5;
+  }
+  
+  /* Button container styling */
+  .button-container-style {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  
+  /* Button styling */
+  .button-style {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #dee4e9;
+    cursor: pointer;
+  }
+  

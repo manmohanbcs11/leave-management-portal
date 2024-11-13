@@ -39,15 +39,6 @@ export const NavBar: React.FC<{}> = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                className={`nav-link ${location.pathname === '/leavebalance' ? 'active' : ''}`}
-                style={location.pathname === '/leavebalance' ? { ...navStyle, ...activeStyle } : navStyle}
-                to="/leavebalance"
-              >
-                <FaBalanceScale /> Leave Balance
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
                 className={`nav-link ${location.pathname === '/appliedleave' ? 'active' : ''}`}
                 style={location.pathname === '/appliedleave' ? { ...navStyle, ...activeStyle } : navStyle}
                 to="/appliedleave"
