@@ -173,6 +173,7 @@ export const LeaveRequest = () => {
             value={comments} required
             onChange={(e) => setComments(e.target.value)}
             rows={3}
+            minLength={8}
           />
         </div>
 

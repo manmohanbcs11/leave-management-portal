@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBalanceScale, FaBook, FaCalendarAlt, FaClipboardCheck, FaFileAlt, FaHome } from 'react-icons/fa';
+import { FaBook, FaCalendarAlt, FaClipboardCheck, FaFileAlt, FaHome } from 'react-icons/fa';
 import { NavLink, useLocation } from 'react-router-dom';
 import '../css/custom.css';
 
