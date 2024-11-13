@@ -45,7 +45,6 @@ export const Signup = (props: SignupProps) => {
       const responseJson = await response.json();
       localStorage.setItem('token', responseJson.data.authToken);
       navigate('/');
-      alert('Registered successfully!');
     } else {
       const errorData = await response.json();
       alert(errorData.message);

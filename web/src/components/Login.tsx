@@ -32,7 +32,7 @@ export const Login = (props: LoginProps) => {
       props.showAlert('success', 'Logged in successfully!');
     } else {
       const errorData = await response.json();
-      props.showAlert('danger', errorData.message);
+      alert(errorData.message);
     }
   }
 
